@@ -1,8 +1,9 @@
 const Datastore = require('nedb');
 
-const db = new Datastore({ filename: './data/menu.db', autoload: true });
+const menuDb = new Datastore({ filename: './data/menu.db', autoload: true });
+const campaignDb = new Datastore({ filename: './data/campaigns.db', autoload: true });
 
-db.find({}, (err, docs) => {
+menuDb.find({}, (err, docs) => {
   if (err) {
     console.error('Error fetching menu:', err);
   } else if (docs.length === 0) {
@@ -55,4 +56,4 @@ db.find({}, (err, docs) => {
   }
 });
 
-module.exports = db;
+module.exports = { menuDb, campaignDb };

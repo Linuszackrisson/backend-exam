@@ -1,0 +1,28 @@
+const { menuDb } = require('../data/db');
+
+const validateCampaign = (req, res, next) => {
+  const { products, campaignPrice } = req.body;
+
+  if (!products || !Array.isArray(products) || products.length === 0) {
+    return res.status(400).json({ message: "Products array is required and should not be empty" });
+  }
+
+  if (!campaignPrice || typeof campaignPrice !== 'number') {
+    return res.status(400).json({ message: "Campaign price is required and should be a number" });
+  }
+
+
+  const productTitles = products.map(product => product.title);
+  menuDb.find({ title: { $in: productTitles } }, (err, docs) => {
+    if (err) {
+      console.error('Error checking products in menu:', err);
+      return res.status(500).json({ error: 'Internal server error' });
+    } else if (docs.length !== products.length) {
+      return res.status(400).json({ message: "One or more products do not exist in the menu" });
+    } else {
+      next();
+    }
+  });
+};
+
+module.exports = validateCampaign;
