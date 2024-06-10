@@ -1,7 +1,9 @@
+{"title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"createdAt":"2024-06-10T19:38:07.139Z","_id":"1bQqvZ56vEUJCgnf"}
+{"title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"createdAt":"2024-06-10T19:38:07.139Z","_id":"7fzavcDf3tSJ95a3"}
+{"title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"createdAt":"2024-06-10T19:38:07.139Z","_id":"9OdgjNBl5Gc7WJok"}
+{"title":"Rövspelare","desc":"Beskrivning av den nya produkten","price":99,"createdAt":{"$$date":1718048301059},"_id":"E8ELc4L8EM3zpgir"}
+{"title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"createdAt":"2024-06-10T19:38:07.139Z","_id":"HEc62ngk3fNKv1XC"}
+{"title":"Rövspelare","desc":"Beskrivning av den nya produkten","price":99,"createdAt":{"$$date":1718060897558},"_id":"WunzbhOnU5GjfQO7","modifiedAt":{"$$date":1718060919494}}
 {"title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"createdAt":"2024-06-10T19:38:07.138Z","_id":"cuGjcyvZoj6qWZmq"}
 {"title":"Caffè Doppio","desc":"Bryggd på månadens bönor.","price":49,"createdAt":"2024-06-10T19:38:07.139Z","_id":"wvAgRfYZbdHJ1hwn"}
-{"title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"createdAt":"2024-06-10T19:38:07.139Z","_id":"7fzavcDf3tSJ95a3"}
-{"title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"createdAt":"2024-06-10T19:38:07.139Z","_id":"HEc62ngk3fNKv1XC"}
-{"title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"createdAt":"2024-06-10T19:38:07.139Z","_id":"9OdgjNBl5Gc7WJok"}
-{"title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"createdAt":"2024-06-10T19:38:07.139Z","_id":"1bQqvZ56vEUJCgnf"}
-{"title":"Rövspelare","desc":"Beskrivning av den nya produkten","price":99,"createdAt":{"$$date":1718048301059},"_id":"E8ELc4L8EM3zpgir"}
+{"title":"Denna","desc":"Beskrivning av den nya produkten","price":99,"createdAt":{"$$date":1718061264918},"_id":"HMkT0PFbbkotdLZD"}

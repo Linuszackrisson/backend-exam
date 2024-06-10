@@ -2,7 +2,6 @@ const Datastore = require('nedb');
 
 const db = new Datastore({ filename: './data/menu.db', autoload: true });
 
-// Skapa menyn i databasen om den är tom
 db.find({}, (err, docs) => {
   if (err) {
     console.error('Error fetching menu:', err);
@@ -46,7 +45,6 @@ db.find({}, (err, docs) => {
       }
     ];
 
-    // Lägg till hela menyn i databasen
     db.insert(menuData, (err, newDocs) => {
       if (err) {
         console.error('Error inserting menu into database:', err);
