@@ -46,7 +46,7 @@ menuDb.find({}, (err, docs) => {
       }
     ];
 
-    db.insert(menuData, (err, newDocs) => {
+    menuDb.insert(menuData, (err, newDocs) => {
       if (err) {
         console.error('Error inserting menu into database:', err);
       } else {

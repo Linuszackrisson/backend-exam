@@ -7,7 +7,7 @@ const campaignRoutes = require('./routes/campaignRoutes'); // Inkludera kampanjr
 const errorMiddleware = require('./middleware/errorMiddleware');
 
 const app = express();
-const PORT = process.env.PORT || 1337;
+const PORT = process.env.PORT || 3000;
 
 app.use(session({
   secret: 'Pappa123', 
