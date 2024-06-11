@@ -9,7 +9,7 @@ Slå i in "node app.js" i konsollen och slå enter för att testa. Som gäst kan
 - GET http://localhost:3000/campagins (Hämta kampanjer om det finns, annars visas felmeddelande)
 
 
-## Admin Endpoints (Alla post eller put skall vara i JSON-format i insomnia)
+## Admin Endpoints (Alla post eller put skall vara i JSON-body i insomnia)
 
 
 - POST http://localhost:3000/login (Logga in som admin) te.x ``{
