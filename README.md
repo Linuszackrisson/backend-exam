@@ -18,23 +18,23 @@ POST http://localhost:3000/login (Logga in som admin) te.x ``{
 
 
 POST http://localhost:3000/menu (Lägga till produkt i meny) te.x {
-  "title": "Denna",
+  ``"title": "Denna",
   "desc": "Beskrivning av den nya produkten",
   "price": 99	
-}
+}``
 
 DELETE http://localhost:3000/menu/:id (Ta bort produkt från meny)
-PUT http://localhost:3000/menu/:id (Ändra produkt) te.x {
+PUT http://localhost:3000/menu/:id (Ändra produkt) te.x ``{
   "title": "Ändrad produkt",
   "desc": "Beskrivning av den nya produkten",
   "price": 99	
-}
+}``
 
-POST http://localhost:3000/campaigns (Skapa ny kampanj) te.x 
+POST http://localhost:3000/campaigns (Skapa ny kampanj) te.x ``
 {
     "products": ["Bryggkaffe", "Caffè Doppio"],
     "campaignPrice": 40
-}
+}``
 DELETE http://localhost:3000/campaigns/:id (Ta bort kampanj, använd id som skapas)
 
 
