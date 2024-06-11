@@ -50,9 +50,9 @@ router.put('/:id', isAdmin, validateProductProperties, (req, res) => {
       console.error('Error modifying product:', err);
       res.status(500).json({ error: 'Internal server error' });
     } else if (numReplaced === 0) {
-      res.status(404).json({ message: 'Product not found' });
+      res.status(404).json({ message: 'Produkten kunde ej hittas!' });
     } else {
-      res.json({ message: 'Product modified successfully' });
+      res.json({ message: 'Ändringarna är nu genomförda!' });
     }
   });
 });
@@ -65,9 +65,9 @@ router.delete('/:id', isAdmin, (req, res) => {
       console.error('Error removing product:', err);
       res.status(500).json({ error: 'Internal server error' });
     } else if (numRemoved === 0) {
-      res.status(404).json({ message: 'Product not found' });
+      res.status(404).json({ message: 'Produkt hittades ej.' });
     } else {
-      res.json({ message: 'Product removed successfully' });
+      res.json({ message: 'Produkten är nu borttagen!' });
     }
   });
 });

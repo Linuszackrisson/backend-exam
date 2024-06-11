@@ -8,7 +8,7 @@ const validateCampaign = (req, res, next) => {
   }
 
   if (!campaignPrice || typeof campaignPrice !== 'number') {
-    return res.status(400).json({ message: "Campaign price is required and should be a number" });
+    return res.status(400).json({ message: "Kampanjpris krävs, och det MÅSTE vara ett nummer!" });
   }
 
 
@@ -18,7 +18,7 @@ const validateCampaign = (req, res, next) => {
       console.error('Error checking products in menu:', err);
       return res.status(500).json({ error: 'Internal server error' });
     } else if (docs.length !== products.length) {
-      return res.status(400).json({ message: "One or more products do not exist in the menu" });
+      return res.status(400).json({ message: "En eller fler produkter finns redan i menyn." });
     } else {
       next();
     }

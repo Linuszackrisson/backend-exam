@@ -20,9 +20,9 @@ router.post('/', (req, res) => {
   if (username === user.username && password === user.password) {
     
     req.session.role = 'admin';
-    res.status(200).json({ message: 'Login successful' });
+    res.status(200).json({ message: 'Inloggning lyckades!' });
   } else {
-    res.status(401).json({ message: 'Invalid username or password' });
+    res.status(401).json({ message: 'Fel användarnamn eller lösenord, testa admin och admin123 :)' });
   }
 });
 

@@ -16,7 +16,7 @@ router.post('/', isAdmin, validateCampaign, (req, res) => {
     }
 
     if (existingCampaign) {
-      return res.status(400).json({ message: 'Campaign with these products already exists' });
+      return res.status(400).json({ message: 'En kampanj med dessa produkter existerar redan.' });
     }
 
     // Lägg till den nya kampanjen
@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
       console.error('Error fetching campaigns:', err);
       res.status(500).json({ error: 'Internal server error' });
     } else if (docs.length === 0) {
-      res.status(404).json({ error: 'No campaigns found' });
+      res.status(404).json({ error: 'Ingen kampanj hittad.' });
     } else {
       res.json(docs);
     }
@@ -54,9 +54,9 @@ router.delete('/:id', isAdmin, (req, res) => {
       console.error('Error removing campaign:', err);
       res.status(500).json({ error: 'Internal server error' });
     } else if (numRemoved === 0) {
-      res.status(404).json({ message: 'Campaign not found' });
+      res.status(404).json({ message: 'Kampanjen du försöker ta bort finns inte.' });
     } else {
-      res.json({ message: 'Campaign removed successfully' });
+      res.json({ message: 'Kampanjen är nu borttagen! Trist, det som var så bra pris.' });
     }
   });
 });
