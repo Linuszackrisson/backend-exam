@@ -5,8 +5,8 @@ Slå i in "node app.js" i konsollen och slå enter för att testa. Som gäst kan
 
 ## Endpoints
 
-- GET http://localhost:1337/menu (Hämta menyn)
-- GET http://localhost:1337/campagins (Hämta kampanjer om det finns, annars visas felmeddelande)
+- GET http://localhost:3000/menu (Hämta menyn)
+- GET http://localhost:3000/campagins (Hämta kampanjer om det finns, annars visas felmeddelande)
 
 
 ## Admin Endpoints (Alla post eller put skall vara i JSON-format i insomnia)
@@ -41,9 +41,9 @@ Slå i in "node app.js" i konsollen och slå enter för att testa. Som gäst kan
 ## Middlewares
 - Du MÅSTE vara inloggad som admin för att göra ovanstående endpoints, är du ej inloggad kommer du få reda på det.
 - Title, desc och price krävs för att lägga till en ny produkt
-- Försök med att lägga till något som inte stämmer överens med ovanstående kommer att stoppas.
-- Det går ej att lägga till en produkt med samma namn
+- Försök med att lägga till något som inte stämmer överens med ovanstående tre krav, kommer att stoppas.
+- Det går ej att lägga till en produkt med samma namn.
 - Ett kampanjpris krävs, och det måste vara ett nummer.
-- En likadan kampanj går ej att lägga till. 
+- Identiska kampanjer går ej att lägga till. 
 
 
