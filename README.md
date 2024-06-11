@@ -11,10 +11,10 @@ GET http://localhost:1337/campagins (Hämta kampanjer om det finns, annars visas
 
 ## Admin Endpoints (Alla post eller put skall vara i JSON-format i insomnia)
 
-POST http://localhost:3000/login (Logga in som admin) te.x {
+POST http://localhost:3000/login (Logga in som admin) te.x ``{
   "username": "admin",
   "password": "admin123"
-}
+}``
 
 
 POST http://localhost:3000/menu (Lägga till produkt i meny) te.x {
