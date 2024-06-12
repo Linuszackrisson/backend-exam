@@ -4,11 +4,9 @@ const { campaignDb } = require('../data/db');
 const isAdmin = require('../middleware/isAdmin');
 const validateCampaign = require('../middleware/validateCampaign');
 
-// POST route för att lägga till en ny kampanj
 router.post('/', isAdmin, validateCampaign, (req, res) => {
   const { products, campaignPrice } = req.body;
 
-  // Kontrollera om kampanjen redan finns
   campaignDb.findOne({ products }, (err, existingCampaign) => {
     if (err) {
       console.error('Error checking existing campaign:', err);
@@ -19,7 +17,6 @@ router.post('/', isAdmin, validateCampaign, (req, res) => {
       return res.status(400).json({ message: 'En kampanj med dessa produkter existerar redan.' });
     }
 
-    // Lägg till den nya kampanjen
     const newCampaign = { products, campaignPrice, createdAt: new Date().toISOString() };
     campaignDb.insert(newCampaign, (err, campaign) => {
       if (err) {
@@ -32,7 +29,6 @@ router.post('/', isAdmin, validateCampaign, (req, res) => {
   });
 });
 
-// GET route för att hämta alla kampanjer
 router.get('/', (req, res) => {
   campaignDb.find({}, (err, docs) => {
     if (err) {
@@ -46,7 +42,6 @@ router.get('/', (req, res) => {
   });
 });
 
-// DELETE route för att ta bort en kampanj
 router.delete('/:id', isAdmin, (req, res) => {
   const campaignId = req.params.id;
   campaignDb.remove({ _id: campaignId }, {}, (err, numRemoved) => {

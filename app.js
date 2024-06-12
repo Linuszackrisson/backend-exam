@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const menuRoutes = require('./routes/menuRoutes');
 const loginRoutes = require('./routes/loginRoutes');
-const campaignRoutes = require('./routes/campaignRoutes'); // Inkludera kampanjrutterna här
+const campaignRoutes = require('./routes/campaignRoutes'); 
 const errorMiddleware = require('./middleware/errorMiddleware');
 
 const app = express();
